@@ -2,7 +2,7 @@
 
 /**
  * print_alphabet - untilizes on the _putchar function to print
- * 		   the alphapet a-z
+ *		 the alphapet a-z
  */
 void print_alphabet(void)
 {
