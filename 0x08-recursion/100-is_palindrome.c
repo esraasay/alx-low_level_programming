@@ -16,11 +16,13 @@ int is_palindrome(char *s)
 	return (check_pal(s, 0, _strlen_recursion(s)));
 }
 
-/*
- * _strlen_recursion - returns The string length
+/**
+ * _strlen_recursion - returns the length of a string
  * @s: string to calculate the length of
- *Return : the string length
+ *
+ * Return: length of the string
  */
+
 int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
