@@ -20,7 +20,7 @@ int is_palindrome(char *s)
 /*
  * _strlen_recursion - returns The string length
  * @s: string to calculate the length of
- *Return : the string length 
+ *Return : the string length
  */
 int _strlen_recursion(char *s)
 {
