@@ -13,20 +13,21 @@
  */
 int main(int argc, char *argv[])
 {
-	int result, n1, n2;
+i	int i, s;
 
-	if (argc < 3 || argc > 3)
+	if (argc == 1 || argc == 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	else
+	{
+		s = 1;
 
-	num1 = _atoi(argv[1]);
-	num2 = _atoi(argv[2]);
-	result = n1 * n2;
+		for (i = 1; i < 3; i++)
+		s *= atoi(argv[i]);
 
-	printf("%d\n", result);
-
+		printf("%d\n", s);
+	}
 	return (0);
 }
-
