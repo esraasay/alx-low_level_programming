@@ -11,35 +11,33 @@
  *
  * Return: Always 0 (success)
  */
-
 int main(int argc, char *argv[])
-
 {
+	int i, r, length, sum;
+	char *ptr;
 
-	int count;
-	int str_to_int;
-	int sum = 0;
+	if (argc < 2)
+	printf("0\n");
 
-	count = 1;
-	while (count < argc)
+	else
 	{
-		if (check_num(argv[count]))
-
+		sum = 0;
+		for (i = 1; i < argc; i++)
 		{
-		str_to_int = atoi(argv[count]);
-			sum += str_to_int;
-		}
+			ptr = argv[i];
+			length = strlen(ptr);
 
-				else
-		{
-			printf("Error\n");
-			return (1);
+			for (r = 0; r < length; r++)
+			{
+				if (isdigit(*(ptr + r)) == 0)
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			sum += atoi(argv[i]);
 		}
-
-		count++;
+		printf("%d\n", sum);
 	}
-
-	printf("%d\n", sum);
 	return (0);
 }
-
