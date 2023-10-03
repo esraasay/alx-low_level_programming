@@ -8,8 +8,7 @@
  * main - multiplies two numbers
  * @argc: number of arguments
  * @argv: array of arguments
- *
- * Return: Return: 1, otherwise 0 
+ * Return:1,otherwise 0
  */
 int main(int argc, char *argv[])
 {
