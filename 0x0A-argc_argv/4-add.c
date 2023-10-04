@@ -13,7 +13,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, r, length, sum;
+	int i, r, l, sum;
 	char *ptr;
 
 	if (argc < 2)
@@ -25,9 +25,9 @@ int main(int argc, char *argv[])
 		for (i = 1; i < argc; i++)
 		{
 			ptr = argv[i];
-			length = strlen(ptr);
+			l = strlen(ptr);
 
-			for (r = 0; r < length; r++)
+			for (r = 0; r < l; r++)
 			{
 				if (isdigit(*(ptr + r)) == 0)
 				{
