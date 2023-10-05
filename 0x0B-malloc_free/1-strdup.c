@@ -3,15 +3,14 @@
 #include <stdlib.h>
 
 /**
- * _strdup - duplicate to a new location
- * @str: char
- * Return value: 0
+ * _strdup - duplicate to new memory space location
+ * @str: string to copy
+ * Return: pointer to duplicated string or NULL if error
  */
-
 char *_strdup(char *str)
 {
 	char *p;
-	int i, z = 0;
+	int i, r = 0;
 
 	if (str == NULL)
 		return (NULL);
@@ -24,8 +23,8 @@ char *_strdup(char *str)
 	if (p == NULL)
 		return (NULL);
 
-	for (z = 0; str[z]; z++)
-		p[z] = str[z];
+	for (r = 0; str[r]; r++)
+		p[r] = str[r];
 
 	return (p);
 }
