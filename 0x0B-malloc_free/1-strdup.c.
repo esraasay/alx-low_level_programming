@@ -1,7 +1,6 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
-
 
 /**
  * _strdup - duplicate to a new location
@@ -9,11 +8,10 @@
  * Return value: 0
  */
 
-
 char *_strdup(char *str)
 {
 	char *p;
-	int i, y = 0;
+	int i, z = 0;
 
 	if (str == NULL)
 		return (NULL);
@@ -26,10 +24,8 @@ char *_strdup(char *str)
 	if (p == NULL)
 		return (NULL);
 
-	for (y = 0; str[y]; y++)
-		p[r] = str[y];
+	for (z = 0; str[z]; z++)
+		p[z] = str[z];
 
 	return (p);
 }
-
-
