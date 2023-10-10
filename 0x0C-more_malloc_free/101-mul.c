@@ -6,9 +6,10 @@
 
 
 /**
- * is_digit - checks if  string contains  non-digit characters
- * @s: string to evaluate
- *Returns: 0
+ * is_digit - checks if a string contains a non-digit char
+ * @s: string to be Evaluated.
+ *
+ * Return: 0 if no-digit is found, 1 otherwise
  */
 
 
@@ -27,25 +28,24 @@ int is_digit(char *s)
 
 
 /**
- * _strlen – returns the length of the string
- * @s: string to evaluate
+ * _strlen - returns the length of a string
+ * @s: string to evaluate.
  *
- * Return value: length of  string
+ * Return: Length of the String
  */
-
 
 
 
 
 int _strlen(char *s)
 {
-	int i = 0;
+	int m = 0;
 
-	while (s[i] != '\0')
+	while (s[m] != '\0')
 	{
-		i++;
+		m++;
 	}
-	return (i);
+	return (m);
 }
 
 /**
@@ -59,33 +59,33 @@ int _strlen(char *s)
 
 int main(int argc, char *argv[])
 {
-	char *r1, *r2;
-	int l1, l2, len, i, carry, dig1, dig2, *result, a = 0;
+	char *z1, *z2;
+	int len1, len2, len, i, carry, digit1, digit2, *result, a = 0;
 
-	r1 = argv[1], r2 = argv[2];
-	if (argc != 3 || !is_dig(r1) || !is_dig(r2))
+	z1 = argv[1], z2 = argv[2];
+	if (argc != 3 || !is_digit(z1) || !is_digit(z2))
 		errors();
-	l1 = _strlen(r1);
-	l2 = _strlen(r2);
-	len = l1 + l2 + 1;
+	len1 = _strlen(z1);
+	len2 = _strlen(z2);
+	len = len1 + len2 + 1;
 	result = malloc(sizeof(int) * len);
 	if (!result)
 		return (1);
-	for (i = 0; i <= l1 + l2; i++)
+	for (i = 0; i <= len1 + len2; i++)
 		result[i] = 0;
-	for (l1 = l1 - 1; l1 >= 0; l1--)
+	for (len1 = len1 - 1; len1 >= 0; len1--)
 	{
-		dig1 = r1[l1] - '0';
+		digit1 = z1[len1] - '0';
 		carry = 0;
-		for (l2 = _strlen(r2) - 1; l2 >= 0; l2--)
+		for (len2 = _strlen(z2) - 1; len2 >= 0; len2--)
 		{
-			dig2 = r2[l2] - '0';
-			carry += result[l1 + l2 + 1] + (dig1 * dig2);
-			result[l1 + l2 + 1] = carry % 10;
+			digit2 = z2[len2] - '0';
+			carry += result[len1 + len2 + 1] + (digit1 * digit2);
+			result[len1 + len2 + 1] = carry % 10;
 			carry /= 10;
 		}
 		if (carry > 0)
-			result[l1 + l2 + 1] += carry;
+			result[len1 + len2 + 1] += carry;
 	}
 	for (i = 0; i < len - 1; i++)
 	{
@@ -100,3 +100,4 @@ int main(int argc, char *argv[])
 	free(result);
 	return (0);
 }
+
