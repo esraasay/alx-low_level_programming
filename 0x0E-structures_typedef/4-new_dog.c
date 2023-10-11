@@ -23,14 +23,14 @@ int _strlen(char *s)
 	return (n);
 }
 
-/*
+/**
  * *_strcpy - copies the string pointed to by src
  * including the terminating null byte (\0)
- * to the buffer pointed To by dest
- * @dest: pointer to The Buffer in which we copy the string
- * @src: String to be Copied
+ * to the buffer pointed to by dest
+ * @dest: pointer to the buffer in which we copy the string
+ * @src: string to be copied
  *
- * Return: The pointer to dest
+ * Return: the pointer to dest
  */
 
 
