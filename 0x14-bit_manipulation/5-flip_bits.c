@@ -9,14 +9,14 @@
 */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int xorvalue = n ^ m;
+	unsigned long int xorval = n ^ m;
 	unsigned int c = 0;
 
-	while (xorvalue)
+	while (xorval)
 	{
-		if (xorvalue & 1ul)
-		c++
-		xorvalue = xorvalue >> 1;
+		if (xorval & 1ul)
+		c++;
+		xorval = xorval >> 1;
 	}
 	return (c);
 	}
